@@ -58,7 +58,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1026, 579);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1019, 496);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -67,19 +67,20 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1020, 515);
+            this.pictureBox1.Size = new System.Drawing.Size(1013, 440);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(3, 524);
+            this.checkBox1.Location = new System.Drawing.Point(3, 449);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(60, 17);
             this.checkBox1.TabIndex = 1;
             this.checkBox1.Text = "Stretch";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // flowLayoutPanel1
             // 
@@ -88,9 +89,9 @@
             this.flowLayoutPanel1.Controls.Add(this.clearButton);
             this.flowLayoutPanel1.Controls.Add(this.showButton);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(156, 524);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(155, 449);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(867, 52);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(861, 44);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // closeButton
@@ -102,6 +103,7 @@
             this.closeButton.TabIndex = 0;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // backgroundColor
             // 
@@ -112,6 +114,7 @@
             this.backgroundColor.TabIndex = 1;
             this.backgroundColor.Text = "Set Background Color";
             this.backgroundColor.UseVisualStyleBackColor = true;
+            this.backgroundColor.Click += new System.EventHandler(this.backgroundColor_Click);
             // 
             // clearButton
             // 
@@ -122,6 +125,7 @@
             this.clearButton.TabIndex = 2;
             this.clearButton.Text = "Clear Picture";
             this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // showButton
             // 
@@ -132,6 +136,7 @@
             this.showButton.TabIndex = 3;
             this.showButton.Text = "Show Picture";
             this.showButton.UseVisualStyleBackColor = true;
+            this.showButton.Click += new System.EventHandler(this.showButton_Click);
             // 
             // openFileDialog1
             // 
@@ -143,10 +148,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1026, 579);
+            this.ClientSize = new System.Drawing.Size(1019, 496);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "Picture Viewer";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
